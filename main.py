@@ -51,8 +51,8 @@ def main():
                 for shot in shots:
                     if CircleShape.collides_with(shot, asteroid):
                         log_event("asteroid_shot")
-                        pygame.sprite.Sprite.kill(asteroid)
-                        pygame.sprite.Sprite.kill(shot)
+                        asteroid.split()
+                        shot.kill()
             for item in drawable:
                 item.draw(screen)
 
